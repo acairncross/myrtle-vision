@@ -1,4 +1,3 @@
-
 def dlrsd_colors():
     colors = {
         'airplane': [ 166, 202, 240, ],
