@@ -20,11 +20,5 @@ jobs:
         run: python -m pip install --upgrade pip pyflakes
       - name: Pyflakes
         run: |
-          errors=$(find -name '*.py' -exec pyflakes {} +)
-          echo "$errors"
-          if [[ -z "$errors" ]]; then
-            exit 0
-          else
-            exit 2
-          fi
+          find -name '*.py' -exec pyflakes {} +
         continue-on-error: true
