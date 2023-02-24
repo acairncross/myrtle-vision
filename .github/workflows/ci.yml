@@ -22,9 +22,9 @@ jobs:
         run: |
           errors=$(find -name '*.py' -exec pyflakes {} +)
           echo "$errors"
-          if [[ -z "$errors" ]];
+          if [[ -z "$errors" ]]; then
             exit 0
-          else;
+          else
             exit 2
-          done
+          fi
         continue-on-error: true
